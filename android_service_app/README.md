@@ -3,7 +3,7 @@
 # Описание
 Приложение (сервис/служба), реализующее взаимодействие с объектом [SpeechRecognizer](https://developer.android.com/reference/android/speech/SpeechRecognizer), и умеющее принимать и отдавать определенные [Intents](https://developer.android.com/guide/components/intents-filters).
 В основе приложения лежат два важных объекта:
-1. [Service](https://developer.android.com/reference/android/app/Service]), работающий в фоне
+1. [Service](https://developer.android.com/reference/android/app/Service), работающий в фоне
 2. [BroadcastReceiver](https://developer.android.com/reference/android/content/BroadcastReceiver), который отвечает за взаимодействие с другими приложениями
 
 ## Intents
