@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bundle xmlns="http://v8.1c.ru/8.2/addin/bundle" name="com_github_salexdv_speechrecognizer_addin">
+  <component os="Android" path="SpeechRecognizer_ARM.so" codeType="c++" type="native" arch="ARM"/>
+  <component os="Android" path="SpeechRecognizer_ARM64.so" codeType="c++" type="native" arch="ARM64"/>
+  <component os="Android" path="SpeechRecognizer_x86.so" codeType="c++" type="native" arch="i386"/>
+  <component os="Android" path="speechrecognizer_addin-debug.apk" codeType="java" type="native" arch="ARM"/>
+  <component os="Android" path="speechrecognizer_addin-debug.apk" codeType="java" type="native" arch="ARM64"/>
+  <component os="Android" path="speechrecognizer_addin-debug.apk" codeType="java" type="native" arch="i386"/>
+</bundle>
