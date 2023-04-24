@@ -34,6 +34,7 @@ public:
     {
 		eMethDelay = 0,
 		eMethStartSpeechRecognition,
+		eMethStartEndlessSpeechRecognition,
 		eMethStopSpeechRecognition,
         eMethPlaySoundAlert,
         eMethRequestServiceStatus,

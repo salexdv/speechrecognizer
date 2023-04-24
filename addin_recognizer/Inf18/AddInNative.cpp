@@ -20,6 +20,7 @@ static const wchar_t *g_MethodNames[] =
 {
 	L"Delay",
 	L"StartSpeechRecognition",
+	L"StartEndlessSpeechRecognition",
 	L"StopSpeechRecognition",
 	L"PlaySoundAlert",
 	L"RequestServiceStatus"
@@ -30,6 +31,7 @@ static const wchar_t *g_MethodNamesRu[] =
 {
 	L"Пауза",
 	L"ЗапуститьРаспознаваниеРечи",
+	L"ЗапуститьПостоянноеРаспознаваниеРечи",
 	L"ОстановитьРаспознаваниеРечи",
 	L"ВоспроизвестиЗвуковоеОповещение",
 	L"ЗапроситьСтатусСервиса"
@@ -371,6 +373,10 @@ bool AddInNative::CallAsProc(const long lMethodNum, tVariant* paParams, const lo
 		}
 		case eMethStartSpeechRecognition: {
 			javaMainApp.startSpeechRecognition();
+			return true;
+		}
+		case eMethStartEndlessSpeechRecognition: {
+			javaMainApp.startEndlessSpeechRecognition();
 			return true;
 		}
 		case eMethStopSpeechRecognition: {

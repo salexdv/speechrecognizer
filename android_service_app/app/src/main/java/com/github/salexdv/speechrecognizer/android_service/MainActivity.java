@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
             ((Button)findViewById(R.id.testService)).setText(R.string.stop_test);
 
-            sendRequest(Intents.START_RECOGNIZER);
+            sendRequest(Intents.START_ENDLESS_RECOGNIZER);
 
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 

@@ -57,9 +57,7 @@ public class MainApp implements Runnable {
 
   public void playSoundAlert() {
 
-    Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-    MediaPlayer mp = MediaPlayer.create(m_Activity.getApplicationContext(), notification);
-    mp.start();
+    recognizerRequest(Intents.PLAY_BEEP);
 
   }
 
@@ -81,8 +79,7 @@ public class MainApp implements Runnable {
 
   }
 
-  public void startSpeechRecognition()
-  {
+  private void startRecognition(String startIntent) {
 
     if (m_Receiver == null)
     {
@@ -129,9 +126,23 @@ public class MainApp implements Runnable {
 
       m_Activity.registerReceiver(m_Receiver, filter);
 
-      recognizerRequest(Intents.START_RECOGNIZER);
+      recognizerRequest(startIntent);
 
     }
+
+  }
+
+  public void startSpeechRecognition()
+  {
+
+    this.startRecognition(Intents.START_RECOGNIZER);
+
+  }
+
+  public void startEndlessSpeechRecognition()
+  {
+
+    this.startRecognition(Intents.START_ENDLESS_RECOGNIZER);
 
   }
 

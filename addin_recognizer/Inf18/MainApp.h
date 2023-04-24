@@ -24,6 +24,7 @@ public:
 	void Initialize(IAddInDefBaseEx*);
 	
 	void startSpeechRecognition() const;
+	void startEndlessSpeechRecognition() const;
 	void stopSpeechRecognition() const;
 	void playSoundAlert() const;
 	void requestServiceStatus() const;

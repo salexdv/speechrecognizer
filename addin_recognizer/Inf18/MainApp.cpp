@@ -63,6 +63,16 @@ void MainApp::startSpeechRecognition() const
 	}
 }
 
+void MainApp::startEndlessSpeechRecognition() const
+{
+	if (obj)
+	{
+		JNIEnv* env = getJniEnv();
+		jmethodID methID = env->GetMethodID(cc, "startEndlessSpeechRecognition", "()V");
+		env->CallVoidMethod(obj, methID);
+	}
+}
+
 void MainApp::stopSpeechRecognition() const
 {
 	if (obj)

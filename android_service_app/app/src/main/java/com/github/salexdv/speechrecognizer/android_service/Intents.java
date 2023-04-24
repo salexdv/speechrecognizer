@@ -7,8 +7,10 @@ public final class Intents {
 
     // Incoming intents
     public static final String START_RECOGNIZER = "com.github.salexdv.speechrecognizer.START";
+    public static final String START_ENDLESS_RECOGNIZER = "com.github.salexdv.speechrecognizer.START_ENDLESS_RECOGNIZER";
     public static final String STOP_RECOGNIZER = "com.github.salexdv.speechrecognizer.STOP";
     public static final String STATUS_RECOGNIZER = "com.github.salexdv.speechrecognizer.STATUS";
+    public static final String PLAY_BEEP = "com.github.salexdv.speechrecognizer.BEEP";
     // Outgoing intents
     public static final String RECOGNIZER_ONREADY = "com.github.salexdv.speechrecognizer.ON_READY";
     public static final String RECOGNIZER_ONBEGIN = "com.github.salexdv.speechrecognizer.ON_BEGININIG";

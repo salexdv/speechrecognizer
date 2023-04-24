@@ -82,8 +82,13 @@ public class RecService extends Service {
                 switch (intent.getAction())
                 {
                     case Intents.START_RECOGNIZER:
+                    case Intents.START_ENDLESS_RECOGNIZER:_RECOGNIZER:
                         try {
                             if (SpeechRecognizer.isRecognitionAvailable(context)) {
+                                if (intent.getAction() == Intents.START_ENDLESS_RECOGNIZER)
+                                    recognizer.enableEndlessRecognition();
+                                else
+                                    recognizer.disableEndlessRecognition();
                                 recognizer.start();
                             }
                             else {
@@ -106,6 +111,8 @@ public class RecService extends Service {
                         Log.d(recognizerTAG, status);
                         sendResponce(Intents.RECOGNIZER_STATUS, status);
                         break;
+                    case Intents.PLAY_BEEP:
+                        recognizer.beep();
                     default:
                         break;
                 }
@@ -116,8 +123,10 @@ public class RecService extends Service {
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intents.START_RECOGNIZER);
+        filter.addAction(Intents.START_ENDLESS_RECOGNIZER);
         filter.addAction(Intents.STOP_RECOGNIZER);
         filter.addAction(Intents.STATUS_RECOGNIZER);
+        filter.addAction(Intents.PLAY_BEEP);
         registerReceiver(receiver, filter);
 
         return START_NOT_STICKY;
